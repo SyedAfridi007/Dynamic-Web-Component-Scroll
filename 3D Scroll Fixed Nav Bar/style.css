@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+h1{
+    margin: 0;
+    text-align: center;
+    letter-spacing: center;
+    font-size: 80px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h1::before,
+h1::after{
+    width: 220px;
+    height: 1px;
+    border: 4px double white;
+    content: '';
+    display: block;
+    margin: 20px auto;
+}
+
+header{
+    height: calc(100%-65px);
+    -webkit-appearance: 1500px;
+    perspective: 1500px;
+    perspective-origin: center bottom;
+}
+
+.hero{
+    position: relative;
+    background:linear-gradient(135deg, rgba(20, 2, 80, 0.9) 0%, rgba(72,56,149,0.8) 100%) ,url(./bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 93vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+}
+
+.hero .overlay{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background:linear-gradient(to bottom, rgba(20, 2, 80, 0.9) 0%, rgba(72,56,149,0.8) 100%);
+}
+
+nav{
+    background: #000a1de5;
+    height: 65px;   
+}
+
+nav.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none;
+    height: 65px;
+    line-height: 65px;
+    padding: 10px 15px ;
+    color: #a1a1a1;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.sticky-wrapper{
+    height: 65px;
+}
+
+
+section{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#item1{
+    background: #000a1de5;
+
+}
+
+section#item2{
+    background: #000a1de5;  
+}
+
