@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+</head>
+<body>
+
+   
+
+    <section class="home" id="home">
+         
+    <div class="nav-links" id="nl">
+
+        <ul>
+            <li> <a href="#header">Home</a> </li>
+            <li> <a href="#about">About</a> </li>
+            <li> <a href="#service">Service</a> </li>
+            <li> <a href="#skill">Skill</a> </li>
+            <li> <a href="#showcase"> Showcase</a></li>
+            <li> <a href="#contact">Contact</a> </li>
+       </ul>
+
+       <h1 class="title">Home</h1>
+
+   </div>
+    </section>
+    <section class="about" id="about">
+        <h1 class="title">About</h1>
+    </section>
+    <section class="service" id="service">
+        <h1 class="title">Service</h1>
+    </section>
+    <section class="skill" id="skill">
+        <h1 class="title">Skill</h1>
+    </section>
+    <section class="contact" id="contact">
+        <h1 class="title">Contact</h1>
+    </section>
+
+    <script>
+
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1500,
+            speedAsDuration: true
+        });
+    
+    </script>
+</body>
+</html>
