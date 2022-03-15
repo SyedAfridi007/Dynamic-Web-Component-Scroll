@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 70%;
+      height: 100vh;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .card {
+      width: 300px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      color: white;
+      font-family: sans-serif;
+      overflow: hidden;
+      
+    }
+    .card.active {
+      z-index: 1;
+      transition: 1s;
+    }
+
+  </style>
+  <body>
+    <div class="container">
+      <div class="card active" style="background-color: crimson">
+        <h1>Crimson</h1>
+      </div>
+      <div class="card" style="background-color: teal"><h1>Teal</h1></div>
+      <div class="card" style="background-color: yellowgreen">
+        <h1>Yellowgreen</h1>
+      </div>
+      <div class="card" style="background-color: violet"><h1>Violet</h1></div>
+      <div class="card" style="background-color: blueviolet">
+        <h1>Blueviolet</h1>
+      </div>
+    </div>
+
+    <script>
+      let card = document.querySelectorAll(".card");
+      console.log(card);
+      let count = 1;
+      window.addEventListener("wheel", function (e) {
+        let currentCard = document.querySelector(".active");
+        currentCard.classList.add("active");
+
+        if (e.deltaY > 0) {
+          currentCard.classList.remove("active");
+
+          count++;
+          if (count >= card.length) {
+            count = 0;
+            card[count].classList.add("active");
+          } else {
+            card[count].classList.add("active");
+          }
+        }
+
+        if (e.deltaY < 0) {
+          currentCard.classList.remove("active");
+          count--;
+          if (count < 0) {
+            count = card.length - 1;
+            card[count].classList.add("active");
+          } else {
+            card[count].classList.add("active");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
