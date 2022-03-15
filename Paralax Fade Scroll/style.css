@@ -1,0 +1,50 @@
+.module-1, .module-2 {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #56C886;
+    z-index: 0;
+  }
+  .module-1 h1, .module-2 h1 {
+    text-align: center;
+    padding-top: 25vh;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 2em;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  .module-2 {
+    box-shadow: 0 0 30em rgba(0, 0, 0, 0.8);
+    background-color: #45C8DC;
+    position: relative;
+    z-index: 2;
+    top: 100vh;
+  }
+  .module-2 h2 {
+    text-align: center;
+    padding-top: 25vh;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 2em;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  #background {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    background-color: black;
+  }
