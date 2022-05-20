@@ -7,3 +7,14 @@ body{
     height:1000vh;
     transition: 1.2s;
 }
+.title {
+  font-size: 7rem;
+  letter-spacing: 5px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #000;
+}
